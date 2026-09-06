@@ -32,7 +32,7 @@ public class Example129 {
         
         System.out.println(muList5);
         
-        for (@Mutable @Borrow Integer item : muList) {
+        for (@Mutable @Borrow Integer item : muList) {    // Error "AssignMutableBorrowed"
             System.out.println(item);
         }
     }
