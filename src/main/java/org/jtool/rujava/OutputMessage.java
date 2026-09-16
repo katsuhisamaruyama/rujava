@@ -211,7 +211,7 @@ abstract public class OutputMessage {
     public String toString() {
         List<String> cs = codeSnippets.stream().map(c -> c.toString()).toList();
         return getFilename() + ": " + title() + ": " + getMessage() + "\n"
-                + String.join("\n    ", cs);
+                + String.join("\n", cs);
     }
     
     public static List<OutputMessage> sort(Collection<? extends OutputMessage> collection) {
@@ -237,7 +237,7 @@ abstract public class OutputMessage {
         
         @Override
         public String toString() {
-            return lineNumber + ": " + code;
+            return "    " + lineNumber + ": " + code;
         }
     }
 }
