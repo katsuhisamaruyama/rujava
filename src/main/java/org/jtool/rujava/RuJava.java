@@ -199,7 +199,7 @@ public class RuJava {
         Logger.print("-Checking source code for " + targetProjects.size() + " project(s)");
         
         for (JavaProject targetProject : targetProjects) {
-            Logger.print("*Target: " + targetProject.getName());
+            Logger.print("  Target: " + targetProject.getName() + " " + targetProject.getFiles().size() + " files");
             
             try {
                 AnnotationCollector collector = new AnnotationCollector(targetProject);
@@ -245,7 +245,8 @@ public class RuJava {
     
     public void printOutputMessages() {
         for (RuProject project : checkedProjects) {
-            Logger.print("*Target: " + project.getName());
+            Logger.print("\n");
+            Logger.print("Target: " + project.getName());
             
             int messages = 0;
             List<RuMethod> methods = RuMethod.sort(project.getMethods());

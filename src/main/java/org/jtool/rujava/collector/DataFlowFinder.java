@@ -44,8 +44,8 @@ public class DataFlowFinder {
         for (JavaMethod jmethod : jmethods) {
             
             if (Logger.isVerbose()) {
-                //monitor.work(1);
-                monitor.printWithCount(1, jmethod.getQualifiedName().fqn());
+                monitor.work(1);
+                //monitor.printWithCount(1, jmethod.getQualifiedName().fqn());
             }
             
             CFG cfg = builder.getCFG(jmethod, true);
