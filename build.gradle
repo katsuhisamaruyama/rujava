@@ -45,7 +45,6 @@ shadowJar {
         attributes('Main-Class' : 'org.jtool.rujava.RuJava')
     }
     
-    
     archiveBaseName = 'rujava'
     archiveClassifier = ''
     archiveVersion = '0.0.1'
@@ -54,5 +53,5 @@ shadowJar {
     exclude 'META-INF/*.DSA'
     exclude 'META-INF/*.RSA'
     
-    from sourceSets.main.allJava
+    exclude('org/slf4j/impl/**')
 }
